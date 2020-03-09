@@ -1,11 +1,11 @@
 package com.ppstudios.recyclerviewdemo.models;
 
-public class RecepieModel {
+public class RecipeModel {
 
     private int img;
     private String text;
 
-    public RecepieModel(int img, String text) {
+    public RecipeModel(int img, String text) {
         this.img = img;
         this.text = text;
     }

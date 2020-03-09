@@ -11,17 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ppstudios.recyclerviewdemo.R;
-import com.ppstudios.recyclerviewdemo.models.RecepieModel;
+import com.ppstudios.recyclerviewdemo.models.RecipeModel;
 
 import java.util.ArrayList;
 
-public class RecepieAdapter extends RecyclerView.Adapter<RecepieAdapter.ViewHolder> {
+public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
-    private ArrayList<RecepieModel> recepieModels;
+    private ArrayList<RecipeModel> recipeModels;
     private Context context;
 
-    public RecepieAdapter(ArrayList<RecepieModel> recepieModels, Context context) {
-        this.recepieModels = recepieModels;
+    public RecipeAdapter(ArrayList<RecipeModel> recipeModels, Context context) {
+        this.recipeModels = recipeModels;
         this.context = context;
     }
 
@@ -34,7 +34,7 @@ public class RecepieAdapter extends RecyclerView.Adapter<RecepieAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        RecepieModel model = recepieModels.get(position);
+        RecipeModel model = recipeModels.get(position);
 
         holder.imageView.setImageResource(model.getImg());
         holder.textView.setText(model.getText());
@@ -42,7 +42,7 @@ public class RecepieAdapter extends RecyclerView.Adapter<RecepieAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return recepieModels.size();
+        return recipeModels.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
